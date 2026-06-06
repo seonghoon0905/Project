@@ -1,0 +1,8 @@
+@HD	VN:1.0	SO:unsorted
+@SQ	SN:chr1	LN:40
+read1	0	chr1	1	255	10M	*	0	0	AGATAACTGG	*	NM:i:0
+read2	0	chr1	4	255	10M	*	0	0	TAACTGGGCC	*	NM:i:0
+read3	0	chr1	9	255	10M	*	0	0	GGGCCCTACG	*	NM:i:0
+read4	0	chr1	14	255	10M	*	0	0	CTACGGCAAT	*	NM:i:0
+read5	0	chr1	22	255	10M	*	0	0	ATATACGTAC	*	NM:i:0
+read_mismatch1	0	chr1	1	255	10M	*	0	0	AGATTACTGG	*	NM:i:1
