@@ -1,7 +1,7 @@
 import os
 
 def parse_config(config_path):
-    # 설정 파일(config.txt)을 읽어 L, D 및 입출력 파일 경로를 반환합니다.
+    # 설정 파일(config.txt)을 읽어 L, D 및 입출력 파일 경로를 반환
     config = {'L_min': 0, 'L_max': 0, 'D': 0, 'ref_path': '', 'reads_path': '', 'output_path': 'Outputs/result.sam'}
     
     with open(config_path, 'r', encoding='utf-8') as f:
@@ -34,7 +34,7 @@ def parse_config(config_path):
     return config
 
 def read_reference_fasta(ref_path):
-    # FASTA 포맷의 레퍼런스 시퀀스를 읽어 단일 문자열로 반환합니다.
+    # FASTA 포맷의 레퍼런스 시퀀스를 읽어 단일 문자열로 반환
     seq = ""
     name = ""
     with open(ref_path, 'r', encoding='utf-8') as f:
@@ -49,7 +49,7 @@ def read_reference_fasta(ref_path):
     return seq, name
 
 def read_reads_fasta(reads_path):
-    # FASTA 포맷의 Read 집합을 읽어 이름과 시퀀스의 튜플 리스트로 반환합니다.
+    # FASTA 포맷의 Read 집합을 읽어 이름과 시퀀스의 튜플 리스트로 반환
     reads = []
     current_name = ""
     current_seq = ""

@@ -79,7 +79,7 @@ class FMCheckpointing:
                             
                 if mismatches <= max_mismatches:
                     results.append({
-                        'position': read_start_in_ref + 1, # SAM은 1-based
+                        'position': read_start_in_ref + 1,
                         'mismatches': mismatches,
                         'cigar': f"{L}M"
                     })

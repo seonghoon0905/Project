@@ -17,12 +17,12 @@ def make_bwt(text):
     return bwt_result
 
 def get_first_occ(bwt_str):
-    # 1. BWT 문자열에 각 글자가 몇 개씩 있는지 확인
+    # BWT 문자열에 각 글자가 몇 개씩 있는지 확인
     counts = {}
     for char in bwt_str:
         counts[char] = counts.get(char, 0) + 1
         
-    # 2. 알파벳 순서대로 정렬
+    # 알파벳 순서대로 정렬
     sorted_chars = sorted(counts.keys())
     
     first_occ = {}

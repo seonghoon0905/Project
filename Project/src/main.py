@@ -4,7 +4,7 @@ from fasta_parser import parse_config, read_reference_fasta, read_reads_fasta
 from fmindex import FMCheckpointing
 
 def main():
-    config_path = "Inputs/config.txt"
+    config_path = "../Inputs/config.txt"
     if len(sys.argv) > 1:
         config_path = sys.argv[1]
 
@@ -26,7 +26,7 @@ def main():
     print(f"Reference Genome ({ref_name}) length: {len(reference)}")
 
     # 2. 인덱스 빌드 또는 로드 (Serialization)
-    index_path = "Inputs/index.pkl"
+    index_path = "../Inputs/index.pkl"
     fm = FMCheckpointing()
     
     start_time = time.time()
@@ -37,7 +37,7 @@ def main():
         print(f"FM-Index loaded in {elapsed:.0f} ms.")
     else:
         print("Index file not found. Building FM-Index...")
-        fm = FMCheckpointing(reference, step=50)
+        fm = FMCheckpointing(reference, occ_step=64, sa_step=32)
         elapsed = (time.time() - start_time) * 1000
         print(f"FM-Index built in {elapsed:.0f} ms.")
         

@@ -4,7 +4,7 @@ from fasta_parser import parse_config, read_reference_fasta, read_reads_fasta
 from fmindex import FMCheckpointing
 
 def main():
-    config_path = "Inputs/config.txt"
+    config_path = "../Inputs/config.txt"
     if len(sys.argv) > 1:
         config_path = sys.argv[1]
 

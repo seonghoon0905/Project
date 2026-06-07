@@ -1,5 +1,0 @@
-L: 10
-D: 1
-Reference: Inputs/Reference.txt
-Reads: Inputs/Reads.txt
-Output: Outputs/result.sam

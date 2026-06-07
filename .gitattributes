@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+Inputs/index.pkl filter=lfs diff=lfs merge=lfs -text
+Inputs/Reads.txt filter=lfs diff=lfs merge=lfs -text
+Inputs/Reference.txt filter=lfs diff=lfs merge=lfs -text
+Outputs/result.sam filter=lfs diff=lfs merge=lfs -text

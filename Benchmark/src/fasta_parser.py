@@ -14,6 +14,7 @@ def parse_config(config_path):
                 key = parts[0].strip()
                 val = parts[1].strip()
                 if key == 'L':
+                    # L: 10 또는 L:[32, 100] 등 다양할 수 있음
                     val = val.replace('[', '').replace(']', '').replace(' ', '')
                     bounds = val.split(',')
                     if len(bounds) == 2:
